@@ -44,7 +44,7 @@
         }
         return check;
     });
-    
+
 
     $('.validate-form .input100').each(function(){
         $(this).focus(function(){
@@ -93,8 +93,22 @@
             $(this).find('i').removeClass('fa-eye-slash');
             showPass = 0;
         }
-
     });
 
 
 })(jQuery);
+var showPass = 0;
+function changeDisplay(object){
+  if(showPass == 0) {
+      $(object).next('input').attr('type','text');
+      $(object).find('i').removeClass('fa-eye');
+      $(object).find('i').addClass('fa-eye-slash');
+      showPass = 1;
+  }
+  else {
+      $(object).next('input').attr('type','password');
+      $(object).find('i').addClass('fa-eye');
+      $(object).find('i').removeClass('fa-eye-slash');
+      showPass = 0;
+  }
+}

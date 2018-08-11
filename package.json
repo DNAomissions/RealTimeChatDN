@@ -1,9 +1,14 @@
 {
   "name": "LiveChatDN",
   "version": "0.0.1",
+  "homepage" : "https://dnaomissions.github.io/RealTimeChatDN/",
   "description": "Real Time LiveChat by : DnAomissions",
   "dependencies": {
     "express": "^4.15.2",
+    "gh-pages": "^1.2.0",
     "socket.io": "^2.1.1"
+  },
+  "scripts" : {
+    "start" : "node index.js"
   }
 }

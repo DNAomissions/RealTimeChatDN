@@ -1,4 +1,4 @@
-var socket = io.connect('http://'+window.location.hostname+':3000');
+var socket = io.connect('https://'+window.location.hostname+':3000');
 $(document).ready(function(){
   socket.on('chat message', function(msg){
     console.log(msg);

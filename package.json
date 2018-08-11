@@ -1,0 +1,9 @@
+{
+  "name": "LiveChatDN",
+  "version": "0.0.1",
+  "description": "Real Time LiveChat by : DnAomissions",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.1.1"
+  }
+}

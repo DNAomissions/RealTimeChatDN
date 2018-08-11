@@ -11,10 +11,8 @@ var port    = process.env.PORT || 3000;
 // var port = process.env.PORT || 3000;
 
 io.on('connection', function(socket){
-  console.log('connected');
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
+  console.log('connected : '+socket.handshake.query['name']);
+
   socket.on('chat message', function(msg){
     console.log(msg);
     io.emit('chat message', {

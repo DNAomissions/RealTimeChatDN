@@ -1,4 +1,4 @@
-var socket = io.connect('http://'+window.location.hostname+':3000');
+var socket = io.connect(window.location.protocol+'//'+window.location.hostname+':3000',{ query: "name="+Cookies.get("name") });
 $(document).ready(function(){
   socket.on('chat message', function(msg){
     console.log(msg);
@@ -38,7 +38,7 @@ new Vue({
         message : this.chatText,
         from : this.from,
         time : this.time,
-        ip : window.location
+        ip : null
       })
       this.chatText = ""
     },
